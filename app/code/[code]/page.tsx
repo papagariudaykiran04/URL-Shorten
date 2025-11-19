@@ -23,7 +23,7 @@ export default async function CodePage({ params }: { params: { code: string } })
     lastClickedAt: r.lastClickedAt ? new Date(r.lastClickedAt).toISOString() : null,
     createdAt: r.createdAt ? new Date(r.createdAt).toISOString() : ''
   }
-  const base = process.env.BASE_URL || 'http://localhost:3000'
+  const base = process.env.BASE_URL || 'https://url-shorten-8v9x.onrender.com'
   return (
     <main className="space-y-6">
       <div className="p-4 bg-white rounded-md shadow border">
