@@ -9,7 +9,7 @@ import { desc } from 'drizzle-orm'
 
 export default async function HomePage() {
   const rows = await db.select().from(links).orderBy(desc(links.createdAt))
-  const base = process.env.BASE_URL || 'http://localhost:3000'
+  const base = process.env.BASE_URL || 'https://url-shorten-8v9x.onrender.com'
   const plainRows = (rows as any[]).map((r: any) => ({
     id: r.id,
     code: r.code,
